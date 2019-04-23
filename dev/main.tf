@@ -16,13 +16,13 @@ module "kd_ec2" {
 module "kd_launch_config" {
   source = "../modules/launch_configurations"
   config_name = "mylc"
-  image_id = "${module.launch_config.image_id}"
+  image_id = "${module.kd_launch_config.image_id}"
   instanceType = "t2.micro"
-  securitygroup_id = "${module.kd_vpc.vpc_id}"
+  securitygroup_id = "${module.kd_launch_config.security_group_id}"
 }
 
 module "kd_asg" {
   source = "../modules/asg"
   asgname="kd_autoscalinggroup"
-  launch_configuration = "${module.kd_asg.launch_configuration}"
+  configuration = "${module.kd_asg.configuration}"
 }

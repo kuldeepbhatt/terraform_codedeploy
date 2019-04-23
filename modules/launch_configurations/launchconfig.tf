@@ -18,10 +18,10 @@ resource "aws_default_security_group" "kd_security_group" {
   }
 }
 
-output "vpc_id" {
-  value = "${aws_default_security_group.security_group.id}"
+output "security_group_id" {
+  value = "${aws_default_security_group.kd_security_group.vpc_id}"
 }
 
 output "image_id" {
-  value = "${aws_launch_configuration.launch_config.id}"
+  value = "${aws_launch_configuration.kd_launch_config.id}"
 }
