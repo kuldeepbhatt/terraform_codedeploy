@@ -12,7 +12,12 @@ resource "aws_autoscaling_group" "kd_asg" {
   min_size             = "${var.min_scaling_to}"
   max_size             = "${var.max_scaling_to}"
   availability_zones = "${var.availability_zones}"
-
+  vpc_zone_identifier = ["${var.vpc_zone_identifier}"]
+  tag {
+   key                 = "Name"
+   value               = "${var.tags_name}"
+   propagate_at_launch = "true"
+  }
   lifecycle {
     create_before_destroy = true
   }

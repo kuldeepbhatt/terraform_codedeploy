@@ -24,5 +24,14 @@ variable "asgname" {
 variable "availability_zones" {
   default = ["us-east-1a"]
 }
+variable "vpc_zone_identifier" {
+  default = []
+}
+
+variable "tags_name" {
+  default = "kd_insance"
+}
+
+
 
 
