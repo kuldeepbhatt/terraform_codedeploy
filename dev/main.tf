@@ -36,5 +36,6 @@ module "kdcodedeploy" {
   iamrolename = "codedepservicerole1"
   depgroupname = "kdnodeappdepgroup"
   deptype = "CodeDeployDefault.OneAtATime"
+  s3_bckt_name = "kdcodedepbckt"
 }
 
