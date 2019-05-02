@@ -8,6 +8,7 @@ variable "visibility" { default = "public"}
 variable "s3_bckt_name" {}
 variable "env" { default = "dev"}
 
+variable "instance_tag" {}
 
 
 

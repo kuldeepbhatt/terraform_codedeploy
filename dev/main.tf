@@ -22,8 +22,8 @@ module "kd_asg" {
   min_scaling_to = 1
   max_scaling_to = 2
   availability_zones = ["us-east-1a", "us-east-1b", "us-east-1c"]
-  vpc_zone_identifier = ["${module.kd_vpc.subnet_id}"]
-  sec_group_vpc_id = "${module.kd_vpc.vpc_id}"
+  # vpc_zone_identifier = ["${module.kd_vpc.subnet_id}"]
+  # sec_group_vpc_id = "${module.kd_vpc.vpc_id}"
   config_name = "kd_lc"
   tags_name = "kd_instance1"
   image_id = "ami-0080e4c5bc078760e"
@@ -37,5 +37,6 @@ module "kdcodedeploy" {
   depgroupname = "kdnodeappdepgroup"
   deptype = "CodeDeployDefault.OneAtATime"
   s3_bckt_name = "kdcodedepbckt"
+  instance_tag = "kd_instance1"
 }
 

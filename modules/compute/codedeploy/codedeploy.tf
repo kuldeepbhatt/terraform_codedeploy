@@ -40,7 +40,7 @@ resource "aws_codedeploy_deployment_group" "kdcodedepgroup" {
   ec2_tag_filter = {
     key   = "Name"
     type  = "KEY_AND_VALUE"
-    value = "CodeDeployDemo"
+    value = "${var.instance_tag}"
   }
 
   # trigger a rollback on deployment failure event

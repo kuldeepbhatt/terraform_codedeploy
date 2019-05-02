@@ -19,8 +19,6 @@ variable "sec_group_name" { default = "kd_sec_group"}
 variable "elbname" { default = "kd-elb"}
 variable "elb_securitygroupname" { default = "elbsecuritygroup"}
 
-variable "sec_group_vpc_id" {}
-
 variable "inst_prof_name" {default="kd_prof_name"}
  
 
