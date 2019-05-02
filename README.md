@@ -1,4 +1,4 @@
-# tf_aws_codedeploy
+# terraform_codedeploy
 This repo holds the a beautiful orchestrator written in Terraform which will build a beautiful infrastructure with just single command. . (terraform apply)
 
 Steps to set up :
