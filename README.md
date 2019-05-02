@@ -11,21 +11,24 @@ Steps to set up :
 3. Clone the repository
 4. Open terminal to the clonned repository
 5. Open dev folder 
-  
-      cd dev
+      ```
+      cd tf_aws_codedeploy/dev
+      ```
  
 6. Initialize Terraform
-  
+      ```
       terraform init
-  
+      ```
+      
 7. Check the plan insights what are the resources to be orchestrated
- 
+      ```
       terraform plan
-  
+      ```
+      
  8. Execute the plan
-  
+      ```
       terraform apply
-  
+      ```
   
 This process may take afew minutes and once the process will be completed, your AWS CodeDeploy orchestration will be up and running and it will be ready for any application deployment.
   
